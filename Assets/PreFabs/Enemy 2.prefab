@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 6354997001989365419}
   - component: {fileID: 6354997001989365414}
   - component: {fileID: 6354997001989365415}
-  - component: {fileID: 6354997001989365412}
+  - component: {fileID: -8300084686736453216}
+  - component: {fileID: 158820023039627906}
+  - component: {fileID: -3677574693727941269}
   m_Layer: 0
   m_Name: Enemy 2
   m_TagString: Enemy
@@ -29,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6354997001989365417}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.6999998, y: 0.6, z: 9.59}
+  m_LocalPosition: {x: -2.6999998, y: 0, z: 9.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -114,9 +116,9 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7707188, y: 2.7733002, z: 2.207838}
-  m_Center: {x: 0.026290774, y: 1.3996444, z: 0.3305807}
---- !u!114 &6354997001989365412
+  m_Size: {x: 1.9140666, y: 2.863605, z: 2.207838}
+  m_Center: {x: -0.048549294, y: 1.354492, z: 0.3305807}
+--- !u!114 &-8300084686736453216
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,7 +130,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8bde2620ef835c48af391d2d1ee6cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 80
+  speed: 20
+--- !u!95 &158820023039627906
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6354997001989365417}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 3751d6025630be542a1062112f2bcae5, type: 3}
+  m_Controller: {fileID: 9100000, guid: 76f55cbd3070de9459d9f9978299228c, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-3677574693727941269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6354997001989365417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1c6566dbcae9ef4b8a0a0daaea21a49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionParticle: {fileID: 19821056, guid: 079954accd64b32419ec069129c81273, type: 3}
+  pointParticle: {fileID: 19826942, guid: 26d069e6f78e6f8478e4dc0152bd6939, type: 3}
 --- !u!1001 &1813940929011853440
 PrefabInstance:
   m_ObjectHideFlags: 0

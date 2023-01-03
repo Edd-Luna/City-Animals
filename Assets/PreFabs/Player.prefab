@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5632159207756187807}
   - component: {fileID: 5632159207756187802}
   - component: {fileID: 2808924174917761292}
+  - component: {fileID: 1121554945339807197}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -128,6 +129,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4010376, y: 3.0177386, z: 1.3135281}
   m_Center: {x: 0.030379593, y: 1.5401877, z: 0.01063633}
+--- !u!95 &1121554945339807197
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5632159207756187810}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: aaf0205bbf9d1a4458899575eed1c962, type: 3}
+  m_Controller: {fileID: 9100000, guid: 022cd8e9b1d113b41905bcb401343e62, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2622781226065476620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -181,6 +202,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400046, guid: 814f4326a50812947b2469896d89a215, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 814f4326a50812947b2469896d89a215, type: 3}
+      propertyPath: m_CullingMode
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

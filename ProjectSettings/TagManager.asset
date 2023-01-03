@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - Obstacle
   - Powerup
+  - Apple
+  - Bomb
+  - Barrier
   layers:
   - Default
   - TransparentFX
