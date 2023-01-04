@@ -19,6 +19,11 @@ public class PlayerController : MonoBehaviour
     public GameObject Diamond;
     public TextMeshProUGUI scoreAndLifes;
     public TextMeshProUGUI gameOverText;
+    public AudioSource playerAudio;
+    public AudioClip failSound;
+    public AudioClip scoreSound;
+    public AudioClip powerUpSound;
+    
 
 
     void Start()
@@ -26,6 +31,7 @@ public class PlayerController : MonoBehaviour
         playerRb = GetComponent<Rigidbody>();
         playerAnim = GetComponent<Animator>();
         Manager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        playerAudio = GetComponent<AudioSource>();
         gameOver = false;
     }
 
@@ -123,6 +129,7 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             gameOverText.gameObject.SetActive(true);
             gameOverText.text = "Animal Collision, Game Over!";
+            playerAudio.PlayOneShot(failSound, 1.0f);
             }
             else 
             {
@@ -142,6 +149,7 @@ public class PlayerController : MonoBehaviour
             playerAnim.SetInteger("DeathType_int", 2);
             gameOverText.gameObject.SetActive(true);
             gameOverText.text = "Obstacle Collision, Game Over!";
+            playerAudio.PlayOneShot(failSound, 1.0f);
             }
             else
             {
@@ -164,6 +172,7 @@ public class PlayerController : MonoBehaviour
             Destroy(other.gameObject);
             Manager.playerLifes += 1;
             Instantiate(lifeParticle, transform.position, lifeParticle.transform.rotation);
+            playerAudio.PlayOneShot(powerUpSound, 1.0f);
         }
     }
 

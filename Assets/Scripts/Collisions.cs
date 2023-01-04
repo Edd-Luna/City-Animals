@@ -14,6 +14,7 @@ public class Collisions : MonoBehaviour
     {
        Manager = GameObject.Find("GameManager").GetComponent<GameManager>();
        playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
+
     }
 
 
@@ -23,14 +24,17 @@ public class Collisions : MonoBehaviour
         {
         if(gameObject.CompareTag("Obstacle") && collision.gameObject.CompareTag("Bomb"))
         {
+            playerControllerScript.playerAudio.PlayOneShot(playerControllerScript.failSound, 1.0f);
             collision.gameObject.SetActive(false);
             Destroy(gameObject);
             Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+            
             
         }
         
         if(gameObject.CompareTag("Enemy") && collision.gameObject.CompareTag("Apple"))
         {
+            playerControllerScript.playerAudio.PlayOneShot(playerControllerScript.scoreSound, 1.0f);
             collision.gameObject.SetActive(false);
             Destroy(gameObject);
             Debug.Log("collision apple");
@@ -45,10 +49,12 @@ public class Collisions : MonoBehaviour
         
         if(gameObject.CompareTag("Enemy") && collision.gameObject.CompareTag("Bomb"))
         {
+            playerControllerScript.playerAudio.PlayOneShot(playerControllerScript.failSound, 1.0f);
             collision.gameObject.SetActive(false);
             Destroy(gameObject);
             Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
             Manager.playerLifes -= 1;
+            
         }
         }
     }

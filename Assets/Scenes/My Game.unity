@@ -630,7 +630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7196914636263404118, guid: ba40976a9e825724b96f2789ddeb6145, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.2
+      value: -8.48
       objectReference: {fileID: 0}
     - target: {fileID: 7196914636263404118, guid: ba40976a9e825724b96f2789ddeb6145, type: 3}
       propertyPath: m_LocalPosition.y
@@ -638,7 +638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7196914636263404118, guid: ba40976a9e825724b96f2789ddeb6145, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -26.3
+      value: -30.34
       objectReference: {fileID: 0}
     - target: {fileID: 7196914636263404118, guid: ba40976a9e825724b96f2789ddeb6145, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2241,6 +2241,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1240914308}
     - target: {fileID: 5632159207756187802, guid: fbe9a09d592c5ad4393fc8f8378ce3a0, type: 3}
+      propertyPath: failSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 9c87f285d32fa4569b77ddf3a7e6df5e, type: 3}
+    - target: {fileID: 5632159207756187802, guid: fbe9a09d592c5ad4393fc8f8378ce3a0, type: 3}
+      propertyPath: scoreSound
+      value: 
+      objectReference: {fileID: 8300000, guid: f928159802e324af2b95417fa6ce3fdf, type: 3}
+    - target: {fileID: 5632159207756187802, guid: fbe9a09d592c5ad4393fc8f8378ce3a0, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 5632159207861187517}
+    - target: {fileID: 5632159207756187802, guid: fbe9a09d592c5ad4393fc8f8378ce3a0, type: 3}
       propertyPath: gameOverText
       value: 
       objectReference: {fileID: 2131568908}
@@ -2248,6 +2260,10 @@ PrefabInstance:
       propertyPath: lifeParticle
       value: 
       objectReference: {fileID: 19861012, guid: 0f75f6db4a318f54382e0c98b2226db8, type: 3}
+    - target: {fileID: 5632159207756187802, guid: fbe9a09d592c5ad4393fc8f8378ce3a0, type: 3}
+      propertyPath: powerUpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f1637b41d770415d9d1e6a33a1db4c8, type: 3}
     - target: {fileID: 5632159207756187802, guid: fbe9a09d592c5ad4393fc8f8378ce3a0, type: 3}
       propertyPath: scoreAndLifes
       value: 
@@ -2306,3 +2322,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbe9a09d592c5ad4393fc8f8378ce3a0, type: 3}
+--- !u!82 &5632159207861187517 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 9006288646170538533, guid: fbe9a09d592c5ad4393fc8f8378ce3a0, type: 3}
+  m_PrefabInstance: {fileID: 5632159207861187516}
+  m_PrefabAsset: {fileID: 0}
