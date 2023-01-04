@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private GameManager Manager;
     private Animator playerAnim;
     public ParticleSystem lifeParticle;
+    public ParticleSystem deathParticle;
     public bool gameOver;
     public GameObject Diamond;
     public TextMeshProUGUI scoreAndLifes;
@@ -72,12 +73,14 @@ public class PlayerController : MonoBehaviour
 
         if(Manager.playerLifes < 0)
         {
-            gameOver = true;
-            Manager.GameOver();
+            Instantiate(deathParticle, transform.position, lifeParticle.transform.rotation);
             playerAnim.SetBool("Death_b", true);
             playerAnim.SetInteger("DeathType_int", 2);
+            gameOver = true;
+            Manager.GameOver();
             gameOverText.gameObject.SetActive(true);
             gameOverText.text = "Game Over!";
+            
         }
         }
     }
@@ -124,6 +127,7 @@ public class PlayerController : MonoBehaviour
             {
             gameOver = true;
             Manager.GameOver();
+            Instantiate(deathParticle, transform.position, lifeParticle.transform.rotation);
             playerAnim.SetBool("Death_b", true);
             playerAnim.SetInteger("DeathType_int", 2);
             Destroy(collision.gameObject);
@@ -145,6 +149,7 @@ public class PlayerController : MonoBehaviour
             {
             gameOver = true;
             Manager.GameOver();
+            Instantiate(deathParticle, transform.position, lifeParticle.transform.rotation);
             playerAnim.SetBool("Death_b", true);
             playerAnim.SetInteger("DeathType_int", 2);
             gameOverText.gameObject.SetActive(true);
